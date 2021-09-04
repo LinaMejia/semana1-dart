@@ -3,12 +3,14 @@ class Persona{
     String apellido;
     int edad;
     Persona(this.nombre, this.apellido, this.edad);
+  
+    Persona.completo({required this.nombre, this.apellido="herrera", this.edad=60});
 }
 
 
 class Padre extends Persona{
   int hijos;
-  Padre({required this.hijos}): super('Lina', 'Leon', 23);
+  Padre({required this.hijos}): super.completo(nombre:'Isabel');
 }
 
 
