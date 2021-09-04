@@ -42,7 +42,57 @@ void main() {
   print(texto9);
   print(texto10);
   print(texto11);
+  
+  
+  //booleans
+  
+  String texto12='';
+  if(texto12.isEmpty){
+    print("Texto 12 es vacío");
+  }
 
-
-
+  var variableNull=null;
+  if (variableNull == null){
+    print('variable null');
+  }
+  
+  //Listas
+  var lista1=['mazda', 'kia', 'renault'];
+  List<String> lista2=['mazda', 'kia', 'renault'];
+  var lista3=["chevrolet",...lista1]; //spread se agrega cada objeto a la lista3
+  lista3.add("bmw");
+  List<String>? lista4 = null;//null safety lists
+  var lista5 = [...lista3, ...?lista4];
+  
+  
+  var listaSet = {'mazda', 'kia', 'renault'}; //no debe tener duplicados
+  listaSet.add("mazdados");
+  listaSet.add("kia");
+  listaSet.clear();
+  List<dynamic> listaDinamica = [1.0, "hola", true];
+  
+  
+  var maps1 = {
+    'red':'rojo',
+    'blue':"azul"
+  };
+  // maps1.clear();
+  maps1['green']='verde';
+  
+  print(lista1);
+  print(lista2);
+  print(lista2.last);
+  print(lista2.reversed);
+  print(lista3);
+  print(listaSet);
+  print(listaDinamica);
+  print(maps1);
+  print(maps1.length);
+  maps1.forEach((key, value) => print(key));
+  maps1.forEach((key, value){
+    print(key);
+    print(value);
+  }
+  );
+  
 }
