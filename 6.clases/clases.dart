@@ -14,6 +14,18 @@ class Padre extends Persona{
 }
 
 
+abstract class Vehiculo{
+    String? placa;
+
+
+    bool VehiculoEncendido();
+}
+
+
+class Taxi extends Vehiculo{
+    bool VehiculoEncendido() => true;
+}
+
 void main(){
     var persona = Persona('Lina', 'Leon', 23); //new opcional para crear instancia
     
@@ -22,4 +34,12 @@ void main(){
   print(persona);
   print(persona.nombre);
   print(elPadre.nombre);
+  
+  var vehiculoTaxi = Taxi();
+  
+  print(vehiculoTaxi.placa);
 }
+
+
+
+
